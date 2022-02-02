@@ -1,4 +1,6 @@
-<ul>
-    <li> <a routerLink="/home">Home</a></li>
-    <li> <a routerLink="/documentos">Documentos</a></li>
+<ul class="mt-5">
+    <li> <a [routerLink]="['/home']">Home</a></li>
+    <li> <a [routerLink]="['/documentos']">Documentos</a></li>
 </ul>
+
+<button class="btn btn-link" type="button" (click)="onLogout()">Logout</button>

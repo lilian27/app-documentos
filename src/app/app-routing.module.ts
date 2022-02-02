@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CheckLoginGuard } from './shared/guards/check-login.guard';
 import { NotCheckLoginGuard } from './shared/guards/not-check-login.guard';
-import { DocumentosModule } from './modules/documentos/documentos.module';
+
 import { HomeComponent } from './modules/home/home.component';
 
 
@@ -17,7 +17,8 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () =>
       import('./modules/auth/login/login.module').then((m) => m.LoginModule),
-    canActivate: [NotCheckLoginGuard],
+    canActivate: [NotCheckLoginGuard]
+    
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // redirect
   { path: '**', redirectTo: 'home' },

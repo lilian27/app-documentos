@@ -7,18 +7,23 @@ import { AppComponent } from './app.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
-
+import { ModalConfirmComponent } from './shared/components/modal-confirm/modal-confirm.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalViewPdfComponent } from './shared/components/modal-view-pdf/modal-view-pdf.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalConfirmComponent,
+    ModalViewPdfComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgbModule,
   ],
   bootstrap: [AppComponent],
 })

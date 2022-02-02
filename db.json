@@ -1,0 +1,12 @@
+{
+    "login":[
+        {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZTVhYjQwNmU2NDRiNDYxMDdlNDVmNyIsImlhdCI6MTY0Mzc0OTA0MywiZXhwIjoxNjQzNzUyNjQzfQ.w2C4cZdeRlZHF3MWqlanCe6YbjfuiCnbtciCBrusIdw",
+            "username": "root",
+            "name": "root hot"
+        }
+    ],
+    "libros":[
+
+    ]
+}

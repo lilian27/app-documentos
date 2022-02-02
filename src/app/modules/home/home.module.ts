@@ -6,11 +6,12 @@ import { HomeComponent } from './home.component';
 import { MenuComponent } from 'src/app/shared/components/menu/menu.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
+import { DocumentoComponent } from '../documento/documento.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, MenuComponent,HeaderComponent, FooterComponent],
+  declarations: [HomeComponent, MenuComponent,HeaderComponent, FooterComponent,DocumentoComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
