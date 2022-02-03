@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalViewPdfComponent } from 'src/app/shared/components/modal-view-pdf/modal-view-pdf.component';
+import { HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import {DocumentosService} from './documentos.service'
+import { DocumentoResponse } from 'src/app/shared/models/documento.interface';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-documento',
@@ -6,26 +14,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./documento.component.css'],
 })
 export class DocumentoComponent implements OnInit {
-  constructor() {}
-  libros = [
-    {
-      fecha: '12/12/2022',
-      estado: 2,
-      nombreEstado: 'activo',
-      nombre: 'documento 1',
-      url: 'https://drive.google.com/file/d/1t6psDhClWx4Qg8MqMU1azv5St17G4nuR/view?usp=sharing',
-    },
-    {
-      fecha: '12/12/2022',
-      estado: 1,
-      nombreEstado: 'no activo',
-      nombre: 'documento 2',
-      url: 'https://drive.google.com/file/d/1bv0To1kXJT4y40XlFIMMGB8dFAhDePvi/view?usp=sharing',
-    },
-  ];
+libros : any
+  constructor(public modalService: NgbModal, private http: HttpClient, private documentoService: DocumentosService,  private router: Router) {}
+   
   ngOnInit(): void {
-    console.log('ENTRANDO DOCUMENTOS!!!!');
-
-    
+    this.documentoService.getDocumentos('').subscribe((rest) => {
+      if (rest) {
+        this.libros = rest
+      }
+    })
   }
+
+  showPDF(url: string): void {
+    const modalPdf = this.modalService.open(ModalViewPdfComponent, {
+      size: 'lg',
+    });
+    (modalPdf.componentInstance.title = 'Visualizar documento'),
+      (modalPdf.componentInstance.btnCancelText = 'Salir');
+    modalPdf.componentInstance.url = url;
+    modalPdf.result.then((result) => {}).catch(() => {});
+  }
+
+  
+  dowloadPdf(url: string) {
+    console.log("descargandoo", url)
+    let headers = new HttpHeaders();
+    headers = headers.set('Accept', 'application/pdf');
+    return this.http.get(url, { headers: headers, responseType: 'blob' });
+  }
+  
+
+  
 }

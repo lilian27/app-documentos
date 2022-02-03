@@ -24,7 +24,7 @@ export class AuthService {
 
   login(authData: User): Observable<UserResponse | void> {
     return this.http
-      .post<UserResponse>(`${environment.API_URL}/api/login`, authData)
+      .post<UserResponse>(`${environment.API_URL}/1bc306c0-efde-4276-8ade-713f0779377a`, authData)
       .pipe(
         map((res: UserResponse) => {
           this.saveToken(res.token);

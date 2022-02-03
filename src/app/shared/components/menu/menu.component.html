@@ -1,6 +1,22 @@
-<ul class="mt-5">
-    <li> <a [routerLink]="['/home']">Home</a></li>
-    <li> <a [routerLink]="['/documentos']">Documentos</a></li>
-</ul>
-
-<button class="btn btn-link" type="button" (click)="onLogout()">Logout</button>
+<div class="d-flex flex-column flex-shrink-0 bg-light text-decoration-none menu-izq" >
+    <p class=" text-center pt-3"><i class="bi bi-rainbow fs-1"></i><br>MyEmpresa</p>
+    <hr>
+    <ul class="nav nav-pills flex-column ">
+      <li class="nav-item">
+        <a href="#" class="nav-link " aria-current="page">
+            <i class="bi bi-house-door-fill"></i> Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+            <i class="bi bi-stickies-fill"></i> Documentos
+        </a>
+      </li>
+      <li>
+        <button class="btn btn-link text-decoration-none" type="button" (click)="onLogout()"> <i class="bi bi-x-square-fill"></i> Cerrar sesión</button>
+      </li>
+      
+    </ul>
+    <hr>
+    
+  </div>

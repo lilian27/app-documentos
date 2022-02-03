@@ -11,7 +11,12 @@ import { DocumentoComponent } from '../documento/documento.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, MenuComponent,HeaderComponent, FooterComponent,DocumentoComponent],
+  declarations: [
+      HomeComponent, 
+      MenuComponent,
+      HeaderComponent, 
+      FooterComponent,
+      DocumentoComponent],
   imports: [
     CommonModule,
     HomeRoutingModule

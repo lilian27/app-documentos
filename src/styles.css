@@ -6,3 +6,43 @@
   height: 1px;
   background: #eee;
 }
+
+body{
+  background-color: #F8F9FA !important;
+}
+
+.table{
+  color: #283E59 !important;
+}
+
+.page-item{
+  color: #283E59 !important;
+}
+
+button{
+  color: #283E59 !important;
+}
+
+/* formulario */
+.formulario a{
+  text-decoration: none;
+  color: #283E59 !important;
+}
+
+.formulario button{
+  color: white !important;
+}
+.formulario label{
+  color: #6e84a3 !important;
+}
+
+
+/* modal*/
+.modal-content button{
+  color: white !important
+}
+
+.pdfobject-container {
+  height: 30rem;
+  border: 1rem solid rgba(0, 0, 0, .1);
+}

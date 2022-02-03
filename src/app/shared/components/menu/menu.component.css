@@ -1,0 +1,12 @@
+.menu-izq{
+    min-height: 100%;
+    max-width: 100%;
+    background-color: #FFFFFF !important;
+    bottom: 0;
+    top: 0;
+    color: #6e84a3 !important;
+}
+
+.menu-izq ul li a, .menu-izq button{
+    color: #6e84a3 !important;
+}

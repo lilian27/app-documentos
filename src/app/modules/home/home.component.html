@@ -1,15 +1,17 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-2" style="background-color: aquamarine;">
-            <app-menu></app-menu>
+        <div class="col-md-2 d-sm-none d-md-block d-none d-sm-block p-0" >
+            <app-menu ></app-menu>
         </div>
-        <div class="col-10">
+        <div class="col-md-10 col-12-sm col-12-xs">
             <app-header></app-header>
-            <router-outlet>
-                <app-documento></app-documento>
-            </router-outlet>
-
+            <div class="vistas">
+                <router-outlet >
+                    <app-documento></app-documento>
+                </router-outlet>
+            </div>
+            
         </div>
     </div>
 </div>
-<app-footer></app-footer>
+<app-footer class="fixed-bottom"></app-footer>
