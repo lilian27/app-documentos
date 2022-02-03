@@ -1,6 +1,16 @@
+## _The Last Markdown Editor, Ever_
+Este proyecto contiene la base de un login y un listado de documentos
+
 # AppDocumentos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
+This project was generated with 
+- [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
+- Node v14.15.3
+
+## APIS
+Se emplearon 2 APIS de https://designer.mocky.io/design las cuales traen información de 
+- Usuario conectado (ok)
+- Listdo de libros (ok)
 
 ## Development server
 
